@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - Parking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="parking-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>Parking Ace</h1>
+          <p>Reserve your spot before you arrive.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="parking.html" class="nav-item active">Parking</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="page-title">Search parking spots</h1>
+        <p class="section-intro">Find available parking near you, book in advance and navigate directly to your slot.</p>
+      </section>
+
+      <section class="search-panel">
+        <div class="search-bar">
+          <input id="searchInput" type="search" placeholder="Search by area, landmark or status" />
+          <button class="button button-primary" type="button" onclick="filterParking()">Search</button>
+        </div>
+        <p>Use the search bar to narrow down parking slots by name, address, or availability.</p>
+      </section>
+
+      <section class="parking-grid" id="parkingResults"></section>
+
+      <section id="bookingSummary"></section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
