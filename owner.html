@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - Owner Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>Owner Dashboard</h1>
+          <p>Manage your parking listings in one place.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search.html" class="nav-item">Search</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
+        <a href="owner.html" class="nav-item active">Owner</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="stats-row" id="ownerStats">
+        <article class="stat-card">
+          <small>Total listings</small>
+          <span id="totalListings">0</span>
+        </article>
+        <article class="stat-card">
+          <small>Available slots</small>
+          <span id="availableCount">0</span>
+        </article>
+        <article class="stat-card">
+          <small>Bookings</small>
+          <span id="bookingCount">0</span>
+        </article>
+        <article class="stat-card">
+          <small>Estimated earnings</small>
+          <span id="totalEarnings">₹0.00</span>
+        </article>
+      </section>
+
+      <section class="owner-grid">
+        <article class="feature-card form-panel">
+          <h2>Add or update parking space</h2>
+          <form id="ownerForm">
+            <div class="form-grid">
+              <label class="field-group">
+                <span class="field-label">Location</span>
+                <input id="locationInput" class="field-input" type="text" placeholder="e.g. Civic Center Garage" required />
+              </label>
+              <label class="field-group">
+                <span class="field-label">Number of slots</span>
+                <input id="slotsInput" class="field-input" type="number" min="1" value="1" required />
+              </label>
+              <label class="field-group">
+                <span class="field-label">Price per hour</span>
+                <input id="priceInput" class="field-input" type="number" min="0" step="0.5" value="2.50" required />
+              </label>
+              <label class="field-group">
+                <span class="field-label">Vehicle type</span>
+                <select id="typeInput" class="field-input" required>
+                  <option value="car">Car</option>
+                  <option value="bike">Bike</option>
+                </select>
+              </label>
+            </div>
+            <label class="field-group">
+              <span class="field-label">Description</span>
+              <textarea id="descriptionInput" class="field-input" rows="4" placeholder="Short details about location and amenities"></textarea>
+            </label>
+            <div class="card-actions">
+              <button class="button button-primary" type="submit">Save space</button>
+              <button class="button button-secondary" type="button" id="resetButton">Reset</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="feature-card" style="grid-column: span 2;">
+          <div class="section-header">
+            <h2>Listed spaces</h2>
+            <p class="section-intro">Edit, delete or mark spaces booked for quick management.</p>
+          </div>
+          <div id="ownerListings" class="owner-listings"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="script.js"></script>
+  <script src="owner.js"></script>
+</body>
+</html>

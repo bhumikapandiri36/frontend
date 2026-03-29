@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - Available Spaces</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>Available parking spaces</h1>
+          <p>Browse owner listings and secure your spot.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search.html" class="nav-item">Search</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
+        <a href="owner.html" class="nav-item">Owner</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search-panel">
+        <div class="search-bar">
+          <input id="vehiclesSearchInput" type="search" placeholder="Search visible spaces" />
+          <select id="vehiclesTypeFilter" class="field-input">
+            <option value="all">All vehicle types</option>
+            <option value="car">Car</option>
+            <option value="bike">Bike</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="page-title">Featured vehicles</h2>
+        <p class="section-intro">Static vehicle recommendations for quick planning.</p>
+      </section>
+      <section class="parking-grid" id="vehicleGrid"></section>
+
+      <section>
+        <h2 class="page-title">Owner-listed parking spots</h2>
+        <p class="section-intro">See only available spaces from local owners.</p>
+      </section>
+      <section class="parking-grid" id="ownerSpaceGrid"></section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

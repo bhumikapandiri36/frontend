@@ -3,40 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parking Ace - Petrol</title>
+  <title>Parking Ace - Confirmation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="petrol-shell">
+  <div class="page-shell">
     <header class="site-header">
       <div class="brand">
         <div class="brand-mark">A</div>
         <div>
-          <h1>Nearby petrol bunks</h1>
-          <p>Quick fuel stops close to your route.</p>
+          <h1>Confirm booking</h1>
+          <p>Review your selected parking space before checkout.</p>
         </div>
       </div>
       <nav class="top-nav">
         <a href="index.html" class="nav-item">Home</a>
         <a href="search.html" class="nav-item">Search</a>
-        <a href="petrol.html" class="nav-item active">Petrol</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
         <a href="owner.html" class="nav-item">Owner</a>
       </nav>
     </header>
 
     <main>
-      <section>
-        <h1 class="page-title">Fuel stations in your area</h1>
-        <p class="section-intro">Browse nearby petrol bunks and navigate there in one tap.</p>
-      </section>
-
-      <section class="petrol-grid" id="petrolResults"></section>
+      <section id="confirmationPanel"></section>
     </main>
   </div>
 
+  <div id="toastContainer" class="toast-container"></div>
+
   <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', renderConfirmationPanel);
+  </script>
 </body>
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>Search parking</h1>
+          <p>Filter by area and vehicle type before booking.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search.html" class="nav-item active">Search</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
+        <a href="owner.html" class="nav-item">Owner</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="page-title">Find available parking</h1>
+        <p class="section-intro">Enter your preferred area, vehicle type and date to preview matching spaces.</p>
+      </section>
+
+      <section class="search-panel">
+        <div class="form-grid">
+          <label class="field-group">
+            <span class="field-label">Location</span>
+            <input id="searchLocation" class="field-input" type="search" placeholder="Search city, neighborhood or lot" />
+          </label>
+
+          <label class="field-group">
+            <span class="field-label">Vehicle type</span>
+            <select id="searchType" class="field-input">
+              <option value="all">All types</option>
+              <option value="car">Car</option>
+              <option value="bike">Bike</option>
+            </select>
+          </label>
+
+          <label class="field-group">
+            <span class="field-label">Date</span>
+            <input id="searchDate" class="field-input" type="date" />
+          </label>
+
+          <label class="field-group">
+            <span class="field-label">Time</span>
+            <input id="searchTime" class="field-input" type="time" />
+          </label>
+        </div>
+
+        <div class="card-actions">
+          <button class="button button-primary" type="button" onclick="submitSearch()">Search spaces</button>
+          <button class="button button-secondary" type="button" onclick="clearSearchInputs()">Clear</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
