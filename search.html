@@ -30,22 +30,23 @@
     <main>
       <section>
         <h1 class="page-title">Find available parking</h1>
-        <p class="section-intro">Enter your preferred area, vehicle type and date to preview matching spaces.</p>
+        <p class="section-intro">Enter your area, choose Bike, Car, Auto or EV, and search for the best nearby options.</p>
       </section>
 
       <section class="search-panel">
         <div class="form-grid">
           <label class="field-group">
-            <span class="field-label">Location</span>
+            <span class="field-label">📍 Location</span>
             <input id="searchLocation" class="field-input" type="search" placeholder="Search city, neighborhood or lot" />
           </label>
 
           <label class="field-group">
             <span class="field-label">Vehicle type</span>
             <select id="searchType" class="field-input">
-              <option value="all">All types</option>
-              <option value="car">Car</option>
-              <option value="bike">Bike</option>
+              <option value="bike">🏍️ Bike</option>
+              <option value="car">🚗 Car</option>
+              <option value="auto">🚖 Auto</option>
+              <option value="ev">⚡ Electric Vehicle</option>
             </select>
           </label>
 
@@ -63,6 +64,7 @@
         <div class="card-actions">
           <button class="button button-primary" type="button" onclick="submitSearch()">Search spaces</button>
           <button class="button button-secondary" type="button" onclick="clearSearchInputs()">Clear</button>
+          <button id="viewEVStationsButton" class="button button-secondary" type="button" onclick="openEVMaps()" style="display:none;">Find EV charging stations nearby</button>
         </div>
       </section>
     </main>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell auth-page">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>Parking Ace</h1>
+          <p>Member login for fast access.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search.html" class="nav-item">Search</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="auth-panel">
+        <div class="auth-card">
+          <span class="eyebrow">Secure access</span>
+          <h1>Sign in to continue</h1>
+          <p class="section-intro">Use your credentials to access parking search, EV stations and bookings.</p>
+
+          <form id="loginForm">
+            <div class="form-grid">
+              <label class="field-group">
+                <span class="field-label">Username</span>
+                <input id="usernameInput" class="field-input" type="text" placeholder="Enter username" required />
+              </label>
+              <label class="field-group">
+                <span class="field-label">Password</span>
+                <input id="passwordInput" class="field-input" type="password" placeholder="Enter password" required />
+              </label>
+            </div>
+            <div class="card-actions">
+              <button class="button button-primary" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

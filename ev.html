@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Ace - EV Stations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <h1>EV charging stations</h1>
+          <p>Find charging points for electric vehicles nearby.</p>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="search.html" class="nav-item">Search</a>
+        <a href="ev.html" class="nav-item active">EV Stations</a>
+        <a href="petrol.html" class="nav-item">Petrol</a>
+        <a href="owner.html" class="nav-item">Owner</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h1 class="page-title">Find EV Charging Stations ⚡</h1>
+        <p class="section-intro">Choose your EV type and location to find nearby charging stations instantly.</p>
+      </section>
+
+      <section class="search-panel">
+        <div class="form-grid">
+          <label class="field-group">
+            <span class="field-label">EV type</span>
+            <select id="evSearchType" class="field-input">
+              <option value="bike">🏍️ Bike</option>
+              <option value="car">🚗 Car</option>
+              <option value="auto">🚖 Auto</option>
+            </select>
+          </label>
+          <label class="field-group">
+            <span class="field-label">Location</span>
+            <input id="evSearchLocation" class="field-input" type="search" placeholder="Enter city or area" />
+          </label>
+        </div>
+        <div class="card-actions">
+          <button class="button button-primary" type="button" onclick="submitEVSearch()">Find Charging Stations</button>
+        </div>
+      </section>
+
+      <section class="parking-grid" id="evStationsGrid"></section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', renderEVStationsPage);
+  </script>
+</body>
+</html>
